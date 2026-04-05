@@ -1,0 +1,254 @@
+/* Mark Button */
+.mark-btn {
+  margin-left: 10px;
+  padding: 3px 6px;
+  font-size: 10px;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mark-btn:hover {
+  background-color: #128c7e;
+}
+
+/* Sidebar (animated) */
+#marker-sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background: #0b141a;
+  color: #e9edef;
+  z-index: 9999;
+  overflow-y: auto;
+  padding: 12px;
+  border-left: 1px solid #222;
+  font-family: Arial, sans-serif;
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+#marker-sidebar.open {
+  transform: translateX(0);
+}
+
+/* Title */
+#marker-sidebar h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Toggle Button */
+#marker-toggle-btn {
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+  z-index: 10000;
+  background: #25d366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: 0.2s ease;
+}
+
+#marker-toggle-btn:hover {
+  transform: scale(1.1);
+  background: #128c7e;
+}
+
+/* Filters */
+#marker-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.filter-btn {
+  padding: 5px 10px;
+  font-size: 11px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #202c33;
+  color: #d1d7db;
+}
+
+.filter-btn:hover {
+  background: #2a3942;
+}
+
+.active-filter {
+  background: #25d366 !important;
+  color: black !important;
+}
+
+/* Card */
+.marker-card {
+  background: #202c33;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.marker-card:hover {
+  background: #2a3942;
+  transform: translateY(-2px);
+}
+
+/* Top row */
+.marker-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+/* Category badge */
+.marker-category {
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* Text */
+.marker-text {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+/* Time */
+.marker-time {
+  font-size: 10px;
+  color: #8696a0;
+}
+
+/* Delete */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #8696a0;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.delete-btn:hover {
+  color: #ff4d4f;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #8696a0;
+}
+
+/* Modal Overlay */
+#custom-category-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 10001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Box */
+.modal-box {
+  background: #111b21;
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  color: white;
+  text-align: center;
+  animation: fadeIn 0.2s ease;
+}
+
+/* Title */
+.modal-box h3 {
+  margin-bottom: 12px;
+}
+
+/* Category Buttons */
+.category-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cat-btn {
+  flex: 1;
+  margin: 2px;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #202c33;
+  color: white;
+}
+
+.cat-btn:hover {
+  background: #2a3942;
+}
+
+/* Input */
+#custom-category-input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* Actions */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-actions button {
+  flex: 1;
+  margin: 2px;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+#cancel-btn {
+  background: #444;
+  color: white;
+}
+
+#ok-btn {
+  background: #25d366;
+  color: black;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
